@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class=" mt-5 d-flex  align-item-center"  >
+    
+        <div class="parent-div d-flex justify-content-center" style="width: 70vw;height: 50vh;" >
+            <div style="display: grid;grid-template-columns: 1 1;border-radius: 20px;" class="d-flex justify-content-center  bg-white p-2 mt-5">
+            <div class="pr-2 " >
+            <form action="" method='POST'>
+                {% csrf_token %}
+                <h1>Login</h1>
+                
+                <input type="email" class="p-1 rounded border border-secondary" name='mail' placeholder="Enter Email">
+                <br>
+                <input type="password" class="p-1 rounded border border-secondary" name="word"  placeholder="Enter Password">
+                <br>
+                <input type="submit" name='submit' value='Login' class="btn btn-primary form-control">
+
+            </form>
+            </div>
+            <div class="pl-2">
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <h1>Register</h1>
+                    
+                    <input class="p-1 border border-secondary rounded" type="email" name='email' placeholder="Enter Email">
+                    <br>
+                    <input class="p-1 border border-secondary rounded" type="password" name="password" id="password" placeholder="Enter Password">
+                    <br>
+                    <input type="text" class="p-1 border border-secondary rounded" name="number" id="num" placeholder="Enter Mobile Numer">
+                    <br>
+                    <input type="submit" name='submit' value='Register' class="btn btn-primary form-control">
+                </form>
+
+            </div>
+        </div>
+        </div>
+
+    
+</div>
+{% endblock %}
